@@ -18,31 +18,45 @@
 
 // #2 roman numeral converter
 
-let romanToInt = (roman) => {
-  let sym = {
-    I: 1,
-    V: 5,
-    X: 10,
-    L: 50,
-    C: 100,
-    D: 500,
-    M: 1000
+// let romanToInt = (roman) => {
+//   let sym = {
+//     I: 1,
+//     V: 5,
+//     X: 10,
+//     L: 50,
+//     C: 100,
+//     D: 500,
+//     M: 1000
+//   }
+//   let result = 0
+
+//   for (let i = 0; i < roman.length; i++) {
+//     const cur = sym[roman[i]]
+//     const next = sym[roman[i + 1]]
+
+//     if (cur < next) {
+//       result += next - cur
+//       i++
+//     } else {
+//       result += cur
+//     }
+//   }
+
+//   console.log(result)
+// }
+
+// romanToInt('V')
+
+// #3 Palindrome number
+
+const isPalindrome = (num) => {
+  let reverse = parseInt(num.toString().split('').reverse().join(''))
+
+  if (num === reverse) {
+    console.log('is a palindrome')
+  } else {
+    console.log('is not palindorme')
   }
-  let result = 0
-
-  for (let i = 0; i < roman.length; i++) {
-    const cur = sym[roman[i]]
-    const next = sym[roman[i + 1]]
-
-    if (cur < next) {
-      result += next - cur
-      i++
-    } else {
-      result += cur
-    }
-  }
-
-  console.log(result)
 }
 
-romanToInt('V')
+isPalindrome(565)
