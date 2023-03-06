@@ -49,14 +49,26 @@
 
 // #3 Palindrome number
 
-const isPalindrome = (num) => {
-  let reverse = parseInt(num.toString().split('').reverse().join(''))
+// const isPalindrome = (num) => {
+//   let reverse = parseInt(num.toString().split('').reverse().join(''))
 
-  if (num === reverse) {
-    console.log('is a palindrome')
-  } else {
-    console.log('is not palindorme')
-  }
+//   if (num === reverse) {
+//     console.log('is a palindrome')
+//   } else {
+//     console.log('is not palindorme')
+//   }
+// }
+
+// isPalindrome(565)
+
+// #4 Calculate the number of letters in the last word of a string
+
+const stringToArray = (str) => {
+  let words = str.split(' ')
+
+  let last = words[words.length - 1]
+
+  console.log(last.length)
 }
 
-isPalindrome(565)
+stringToArray('Hello World')
