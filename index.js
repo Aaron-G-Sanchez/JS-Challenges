@@ -63,12 +63,31 @@
 
 // #4 Calculate the number of letters in the last word of a string
 
-const stringToArray = (str) => {
-  let words = str.split(' ')
+// const stringToArray = (str) => {
+//   let words = str.split(' ')
 
-  let last = words[words.length - 1]
+//   let last = words[words.length - 1]
 
-  console.log(last.length)
+//   console.log(last.length)
+// }
+
+// stringToArray('Hello World')
+
+const nums = [2, 7, 11, 15]
+
+const target = 9
+
+const twoSum = (a, b) => {
+  for (let i = 0; i < a.length; i++) {
+    let sum = []
+    let current = a[i]
+    let next = a[i + 1]
+
+    if (current + next === b) {
+      sum.push(current, next)
+      console.log(sum)
+    }
+  }
 }
 
-stringToArray('Hello World')
+twoSum(nums, target)
